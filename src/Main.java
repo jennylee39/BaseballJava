@@ -2,7 +2,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    static int MAX_NUMBER = 10;
+    public static final int MAX_NUMBER = 10;
+    public static final int DIGIT = 3;
 
     public static void main(String[] args) {
         // 정답을 생성한다. (0 - 9 사이의 중복되지 않는 3개의 숫자)
