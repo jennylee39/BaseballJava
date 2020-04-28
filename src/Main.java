@@ -45,26 +45,24 @@ public class Main {
 
 
             // 결과를 계산한다.
-            int strike = 0;
-            int ball = 0;
-            int out = 0;
+            Result result = new Result();
 
             for (int i = 0; i < DIGIT; i++) {
                 int j = (i + 1) % DIGIT; // (2+1) % 3 = 0
                 int k = (i + 2) % DIGIT; // (2+2) % 3 = 1
 
                 if (guesses[i] == answers[i])
-                    strike++;
+                    result.strike++;
                 else if (guesses[i] == answers[j] || guesses[i] == answers[k])
-                    ball++;
+                    result.ball++;
                 else
-                    out++;
+                    result.out++;
             }
 
-            System.out.println("S:" + strike + " B:" + ball + " O:" + out);
+            System.out.println("S:" + result.strike + " B:" + result.ball + " O:" + result.out);
 
             // 3S가 아니면 돌아간다.
-            if (strike == DIGIT)
+            if (result.strike == DIGIT)
                 break;
         }
 
